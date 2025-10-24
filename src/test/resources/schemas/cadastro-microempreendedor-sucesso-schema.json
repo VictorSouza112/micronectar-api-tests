@@ -1,0 +1,65 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1761011772.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "idUsuario",
+    "nomeFantasia",
+    "email",
+    "tipoUsuario",
+    "nrCnpj"
+  ],
+  "properties": {
+    "idUsuario": {
+      "$id": "#root/idUsuario",
+      "title": "Idusuario",
+      "type": "integer",
+      "examples": [
+        3
+      ],
+      "default": 0
+    },
+    "nomeFantasia": {
+      "$id": "#root/nomeFantasia",
+      "title": "Nomefantasia",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "Empreendimentos Sustentáveis"
+      ],
+      "pattern": "^.*$"
+    },
+    "email": {
+      "$id": "#root/email",
+      "title": "Email",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "ana@email.com"
+      ],
+      "pattern": "^.*$"
+    },
+    "tipoUsuario": {
+      "$id": "#root/tipoUsuario",
+      "title": "Tipousuario",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "MICROEMPREENDEDOR"
+      ],
+      "pattern": "^.*$"
+    },
+    "nrCnpj": {
+      "$id": "#root/nrCnpj",
+      "title": "Nrcnpj",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "96.876.462/0001-46"
+      ],
+      "pattern": "^.*$"
+    }
+  }
+}
