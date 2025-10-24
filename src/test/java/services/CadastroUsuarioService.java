@@ -29,7 +29,7 @@ import static io.restassured.RestAssured.given;
 public class CadastroUsuarioService {
 
     private Response response;
-    private final String BASE_URL = "http://localhost:8080";
+    private final String BASE_URL = System.getProperty("base.url", "http://localhost:8080");
     private final Gson gson = new Gson();
 
     private final String schemasPath = "src/test/resources/schemas/";

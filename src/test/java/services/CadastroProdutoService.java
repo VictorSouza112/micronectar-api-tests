@@ -15,7 +15,7 @@ import static io.restassured.RestAssured.given;
 public class CadastroProdutoService {
 
     private Response response;
-    private final String BASE_URL = "http://localhost:8080";
+    private final String BASE_URL = System.getProperty("base.url", "http://localhost:8080");
     private final Gson gson = new Gson();
 
     // Método para cadastrar o usuário do Contexto

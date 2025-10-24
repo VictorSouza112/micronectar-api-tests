@@ -34,7 +34,10 @@ jobs:
 
       # Passo 3: Executa os testes usando o mesmo comando que usamos localmente
       - name: Executar testes automatizados com Maven
-        run: mvn clean test
+        env:
+          # Define a URL do ambiente de Staging como uma variável de ambiente para o passo
+          STAGING_URL: ${{ secrets.STAGING_URL }}
+        run: mvn clean test -Dbase.url=${{ env.STAGING_URL }}
 
       # Passo 4 (Opcional, mas altamente recomendado): Salva o relatório de testes
       - name: Carregar Relatório do Cucumber
